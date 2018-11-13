@@ -2,6 +2,7 @@ import datetime
 
 
 class Pizzeria(object):
+    # default pizzas  - names
     def __init__(self, title, city, default_pizzas):
         self.__title = title
         self.__city = city

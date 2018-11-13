@@ -32,9 +32,9 @@ class Client(object):
     def city(self, city):
         self.__city = city
 
-    def create_order(self, pizza, ingredients):
-        new_order = order.Order(self, pizza, ingredients)
-        self.__system.process_order(new_order)
+    def create_order(self, pizzas_and_ingredients):
+        new_order = order.Order(self, pizzas_and_ingredients)
+        self.__system.process(new_order)
 
     def __str__(self):
         return "Client: " + self.__first_name + " " + self.__second_name + "\nCity: " + self.__city
