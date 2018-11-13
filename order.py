@@ -4,7 +4,7 @@ class Order(object):
 
     @property
     def pizzas(self):
-        return self.__pizzas
+        return self.__ord_pizzas
 
     def add(self, name, ingredients):
         self.__ord_pizzas[name] = ingredients;
