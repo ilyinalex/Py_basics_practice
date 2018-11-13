@@ -7,4 +7,4 @@ class Order(object):
         return self.__ord_pizzas
 
     def add(self, name, ingredients):
-        self.__ord_pizzas[name] = ingredients;
+        self.__ord_pizzas[name] = ingredients

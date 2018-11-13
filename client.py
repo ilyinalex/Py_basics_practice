@@ -1,8 +1,12 @@
+import order
+
+
 class Client(object):
-    def __init__(self, f_name, s_name, city):
+    def __init__(self, f_name, s_name, city, system):
         self.__first_name = f_name
         self.__second_name = s_name
         self.__city = city
+        self.__system = system
 
     @property
     def first_name(self):
@@ -28,5 +32,9 @@ class Client(object):
     def city(self, city):
         self.__city = city
 
-    def create_order(self):
-        pass
+    def create_order(self, pizza, ingredients):
+        new_order = order.Order(self, pizza, ingredients)
+        self.__system.process_order(new_order)
+
+    def __str__(self):
+        return "Client: " + self.__first_name + " " + self.__second_name + "\nCity: " + self.__city

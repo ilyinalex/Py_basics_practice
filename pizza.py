@@ -43,4 +43,7 @@ class Pizza:
 
     @name.setter
     def name(self, name):
-        self.name = name
+        self._name = name
+
+    def __str__(self):
+        return "Name: " + self._name + ";\nSize: " + str(self._size) + "."
