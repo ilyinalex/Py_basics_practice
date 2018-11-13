@@ -1,17 +1,10 @@
 class Order(object):
-    def __init__(self, client, pizza, ingredients):
-        self.__client = client
-        self.__pizza = pizza
-        self.__ingredients = ingredients
+    def __init__(self):
+        self.__ord_pizzas = {}
 
     @property
-    def client(self):
-        return self.__client
+    def pizzas(self):
+        return self.__ord_pizzas
 
-    @property
-    def pizza(self):
-        return self.__pizza
-
-    @property
-    def ingredients(self):
-        return self.__ingredients
+    def add(self, name, ingredients):
+        self.__ord_pizzas[name] = ingredients;
