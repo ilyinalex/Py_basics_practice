@@ -24,6 +24,10 @@ class Pizzeria(object):
     def city(self):
         return self.__city
 
+    @property
+    def bakes(self):
+        return self.__bakes
+
     @city.setter
     def city(self, city):
         self.__city = city

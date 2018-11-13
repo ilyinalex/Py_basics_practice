@@ -9,4 +9,4 @@ class MexicanBake(Bake):
         self.__default_ingredients = default_ingredients
 
     def cook(self):
-        return MexicanPizza(self.__default_size, self.__default_price, self.__default_ingredients)
+        return MexicanPizza(self.__default_size, self.__default_price, self.__default_ingredients, "mexican")
