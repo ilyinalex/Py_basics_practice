@@ -14,7 +14,7 @@ class PizzaSystem(object):
         if PizzaSystem.__instance is None:
             PizzaSystem.__instance = self
             self.__pizzerias = pizzerias
-            self.__bakes = {"mexican": MexicanBake()}
+            # self.__bakes = {"mexican": MexicanBake()}
 
     def get_pizzas_list(self, city):
         res = []
