@@ -11,3 +11,28 @@ class Pizza:
     def calculate_price(self):
         for ingr in self._ingredients:
             self._price += ingr.price
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        _size = size
+
+    @property
+    def price(self):
+        return self._price
+
+    @price.setter
+    def price(self, price):
+        self._price = price
+
+    @property
+    def ingredients(self):
+        return self._ingredients
+
+    @ingredients.setter
+    def ingredients(self, ingredients):
+        self._ingredients = ingredients
+
