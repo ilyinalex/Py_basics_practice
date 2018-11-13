@@ -19,8 +19,14 @@ class PizzaSystem(object):
     def get_pizzas_list(self, city):
         res = []
         for pizz in self.__pizzerias:
-            res.append(pizz.get_pizza_of_the_day())
+            if pizz.city == city:
+                res.append(pizz.get_pizza_of_the_day())
         return res
+
+    def get_pizza(self, name):
+        for pizz in self.__pizzerias:
+            if pizz.get_pizza_of_the_day().name == name:
+                return pizz.get_pizza_of_the_day.ingredieants
 
     def add_pizzeria(self, pizzeria):
         self.__pizzerias.append(pizzeria)

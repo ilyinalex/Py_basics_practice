@@ -28,6 +28,5 @@ class Client(object):
     def city(self, city):
         self.__city = city
 
-
     def create_order(self):
         pass
