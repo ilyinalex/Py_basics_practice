@@ -7,6 +7,10 @@ class Pizzeria(object):
         self.__city = city
         self.__current_day = datetime.datetime.now().weekday()
         self.__default_pizzas = default_pizzas
+        self.__bakes = {}
+
+    def add_bake(self, pizzas_name, bake):
+        self.__bakes[pizzas_name] = bake
 
     @property
     def title(self):
