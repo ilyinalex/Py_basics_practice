@@ -4,12 +4,12 @@ class Order(object):
         self.__client = client
 
     @property
-    def pizzas(self):
+    def ord_pizzas(self):
         return self.__ord_pizzas
 
-    @property
-    def client(self):
-        return self.__client
+    @ord_pizzas.setter
+    def ord_pizzas(self, ord_pizzas_and_ingredients):
+        self.__ord_pizzas = ord_pizzas_and_ingredients
 
     def add(self, name, ingredients):
         self.__ord_pizzas[name] = ingredients
